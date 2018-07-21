@@ -19,6 +19,7 @@ LOCAL_OVERRIDES_PACKAGES := AlarmClock \
         HoloSpiralWallpaper \
         LockClock \
         MagicSmokeWallpapers \
+        Messaging \
         NfcNci \
         NoiseField \
         OneTimeInitializer \
