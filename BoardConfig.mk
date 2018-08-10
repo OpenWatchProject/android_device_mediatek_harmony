@@ -1,4 +1,4 @@
-LOCAL_PATH := device/nomi/i504
+LOCAL_PATH := device/mediatek/whisper
 
 # Platform
 TARGET_BOARD_PLATFORM := mt6580
@@ -30,14 +30,13 @@ COMMON_GLOBAL_CFLAGS += -DMTK_HARDWARE -DADD_LEGACY_ACQUIRE_BUFFER_SYMBOL
 COMMON_GLOBAL_CPPFLAGS += -DMTK_HARDWARE
 
 # Partitions
-# make_ext4fs requires numbers in dec format
 BOARD_BOOTIMAGE_PARTITION_SIZE := 16777216
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 16777216
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1556925644
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 5583457484
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 998244352
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 1610612736
+BOARD_FLASH_BLOCK_SIZE := 4096
 
-TARGET_USERIMAGES_USE_EXT4:=true
+TARGET_USERIMAGES_USE_EXT4:= true
 TARGET_USERIMAGES_SPARSE_EXT_DISABLED := false
 
 BOARD_KERNEL_CMDLINE += \
@@ -56,18 +55,18 @@ TARGET_KMODULES := true
 COMMON_GLOBAL_CFLAGS += -DDISABLE_HW_ID_MATCH_CHECK
 TARGET_RUNNING_WITHOUT_SYNC_FRAMEWORK := true
 
-TARGET_PREBUILT_KERNEL := device/nomi/i504/kernel
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000 --board 1441186574
+TARGET_PREBUILT_KERNEL := device/mediatek/whisper/kernel
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x04000000 --tags_offset 0x0e000000 --board DMN_SPI_240_320
 BOARD_CUSTOM_BOOTIMG := true
-TARGET_PREBUILT_RECOVERY_KERNEL := device/nomi/i504/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/mediatek/whisper/kernel
 
-TARGET_RECOVERY_FSTAB := device/nomi/i504/rootdir/root/fstab.mt6580
+TARGET_RECOVERY_FSTAB := device/mediatek/whisper/rootdir/root/fstab.mt6580
 
-TARGET_OTA_ASSERT_DEVICE := i504,nomi_i504,"Nomi i504"
+TARGET_OTA_ASSERT_DEVICE := whisper,mediatek_whisper,"Nomi whisper"
 # TWRP
-DEVICE_RESOLUTION := 720x1280
-TARGET_SCREEN_HEIGHT := 1280
-TARGET_SCREEN_WIDTH := 720
+DEVICE_RESOLUTION := 320x240
+TARGET_SCREEN_HEIGHT := 240
+TARGET_SCREEN_WIDTH := 320
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_BRIGHTNESS_PATH := /sys/devices/platform/leds-mt65xx/leds/lcd-backlight/brightness
@@ -92,10 +91,10 @@ DISABLE_DEXPREOPT := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/nomi/i504/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/mediatek/whisper/bluetooth
 
 # EGL settings
-BOARD_EGL_CFG := device/nomi/i504/rootdir/system/lib/egl/egl.cfg
+BOARD_EGL_CFG := device/mediatek/whisper/rootdir/system/lib/egl/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -104,7 +103,7 @@ TARGET_CPU_MEMCPY_OPT_DISABLE := true
 
 # SELINUX
 BOARD_SEPOLICY_DIRS := \
-       device/nomi/i504/sepolicy
+       device/mediatek/whisper/sepolicy
 
 BOARD_SEPOLICY_UNION := \
     app.te \
@@ -224,8 +223,6 @@ BOARD_SEPOLICY_UNION := \
     program_binary.te \
     genfs_contexts
 
- 
-
 BOARD_SEPOLICY_UNION += \
 	adbd.te \
 	bluetooth.te \
@@ -292,7 +289,7 @@ BOARD_SEPOLICY_UNION += \
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/virtual/android_usb/android0/f_mass_storage/lun%d/file"
 
 # RIL
-# BOARD_RIL_CLASS := ../../../device/nomi/i504/ril/
+# BOARD_RIL_CLASS := ../../../device/mediatek/whisper/ril/
 
 BOARD_CONNECTIVITY_VENDOR := MediaTek
 BOARD_CONNECTIVITY_MODULE := conn_soc
@@ -309,4 +306,4 @@ WIFI_DRIVER_FW_PATH_AP:=AP
 WIFI_DRIVER_FW_PATH_P2P:=P2P
 
 # GPS
-TARGET_SPECIFIC_HEADER_PATH := device/nomi/i504/include
+TARGET_SPECIFIC_HEADER_PATH := device/mediatek/whisper/include
