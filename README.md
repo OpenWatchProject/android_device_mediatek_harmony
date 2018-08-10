@@ -1,34 +1,14 @@
-Nomi i504 Dream
-==============
+Device Tree for MediaTek Whisper (LEMFO LEM4 PRO)
+===========================================
 
 Basic   | Spec Sheet
 -------:|:-------------------------
-CPU     | 1.3GHz Quad-Core MT6580
-GPU     | Mali-400MP
+CPU     | Quad-core 1.3 GHz Cortex-A53
+Chipset | MediaTek MT6580M
+GPU     | Mali-400 MP
 Memory  | 1GB RAM
 Shipped Android Version | 5.1
-Storage | 8GB
-Battery | 2000 mAh
-Display | 5" 1280 x 720 px
-Camera  | 8MPx, LED Flash
-
-![Nomi](http://nomi-electronics.com/wp-content/uploads/2015/08/MARK0632.jpg "Nomi i504 Dream Black")
-
-This branch is for building CyanogenMod 12.1 (or Android Lollipop 5.1 AOSP based roms) ROMS.
-
-Working:
-- Audio
-- Sensors
-- Wi-Fi
-- Camera for taking pictures (not video)
-- Modem
-- USSD
-- Bluetooth
-- Mobile internet
-- Wi-Fi tethering
-- GPS
-- HW composer
-- Sleep
-
-Not working/Bugs:
-- Video recording
+Storage | 16GB
+Battery | 1200mAh
+Display | 320 x 240 pixels, 2.2 inches
+Camera  | Main 1.3MP
