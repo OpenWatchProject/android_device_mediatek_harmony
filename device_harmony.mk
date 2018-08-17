@@ -5,11 +5,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/common/gps/gps_us_supl.mk)
 
 # call the proprietary setup
-$(call inherit-product-if-exists, vendor/mediatek/whisper/whisper-vendor.mk)
+$(call inherit-product-if-exists, vendor/mediatek/harmony/harmony-vendor.mk)
 
 PRODUCT_CHARACTERISTICS := default
 
-LOCAL_PATH := device/mediatek/whisper
+LOCAL_PATH := device/mediatek/harmony
 ifeq ($(TARGET_PREBUILT_KERNEL),)
 	LOCAL_KERNEL := $(LOCAL_PATH)/kernel
 else
@@ -89,7 +89,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/rootdir/root/init.aee.rc:root/init.aee.rc \
     $(LOCAL_KERNEL):kernel
 
-DEVICE_PACKAGE_OVERLAYS += device/mediatek/whisper/overlay
+DEVICE_PACKAGE_OVERLAYS += device/mediatek/harmony/overlay
 
 # TWRP
 PRODUCT_COPY_FILES += \

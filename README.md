@@ -1,4 +1,4 @@
-Device Tree for MediaTek Whisper (LEMFO LEM4 PRO)
+Device Tree for MediaTek harmony (LEMFO LEM4 PRO)
 ===========================================
 
 Basic   | Spec Sheet

@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_whisper.mk
+    $(LOCAL_DIR)/device_harmony.mk
