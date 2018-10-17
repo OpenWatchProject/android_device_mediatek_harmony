@@ -29,6 +29,10 @@ TARGET_VENDOR := mediatek
 TARGET_VENDOR_PRODUCT_NAME := Harmony
 TARGET_VENDOR_DEVICE_NAME := mediatek
 
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=harmony \
+    PRODUCT_NAME=Harmony
+
 # Lineage-specific overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay-lineage
